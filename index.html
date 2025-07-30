@@ -1,32 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8" />
-    <title>Redirecting...</title>
-    <script>
-      async function redirectToLatestURL() {
-        try {
-          // Replace this with your actual deployed Apps Script Web App URL
-          const response = await fetch("https://script.google.com/macros/s/AKfycbxm2rs75TC431tOFUOMTjBjH6W4ZGk2Wp1OY_sPBulCw6PFP7D3JgLZ0ZSRy9sT-Mchew/exec");
-
-          if (!response.ok) throw new Error("Failed to fetch publishedURL");
-
-          const redirectUrl = await response.text();
-
-          if (redirectUrl.startsWith("http")) {
-            window.location.href = redirectUrl;
-          } else {
-            document.body.innerHTML = "<p>⚠️ Invalid redirect URL: " + redirectUrl + "</p>";
-          }
-        } catch (error) {
-          document.body.innerHTML = "<p>🚫 Redirect failed: " + error + "</p>";
-        }
-      }
-
-      redirectToLatestURL();
-    </script>
+    <meta http-equiv="refresh" content="0; url=https://docs.google.com/presentation/d/e/2PACX-1vSE3jXPs7F3UQGB4FkkTwE4zkYpDrI86iN-acZF-iYeTsvzKtKBEh-FUX5K_CY9FsCgee-zr_cjFVTv/pub?start=true&loop=true&delayms=3000">
   </head>
   <body>
-    <p>🔄 Redirecting to latest presentation...</p>
+    <p>If you are not redirected, <a href="https://docs.google.com/presentation/d/e/2PACX-1vSE3jXPs7F3UQGB4FkkTwE4zkYpDrI86iN-acZF-iYeTsvzKtKBEh-FUX5K_CY9FsCgee-zr_cjFVTv/pub?start=true&loop=true&delayms=3000">click here</a>.</p>
   </body>
 </html>
