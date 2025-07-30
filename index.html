@@ -1,9 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0; url=https://docs.google.com/presentation/d/e/2PACX-1vSE3jXPs7F3UQGB4FkkTwE4zkYpDrI86iN-acZF-iYeTsvzKtKBEh-FUX5K_CY9FsCgee-zr_cjFVTv/pub?start=true&loop=true&delayms=3000">
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <script>
+      async function redirectToLatestSlide() {
+        try {
+          // 🔁 Replace with your deployed Apps Script web app URL
+          const response = await fetch("https://script.google.com/macros/s/AKfycbxm2rs75TC431tOFUOMTjBjH6W4ZGk2Wp1OY_sPBulCw6PFP7D3JgLZ0ZSRy9sT-Mchew/exec");
+          const url = await response.text();
+
+          if (url.startsWith("http")) {
+            window.location.href = url;
+          } else {
+            document.body.innerHTML = `<p>⚠️ Invalid URL returned: ${url}</p>`;
+          }
+        } catch (err) {
+          document.body.innerHTML = `<p>🚫 Failed to fetch slide URL: ${err.message}</p>`;
+        }
+      }
+
+      redirectToLatestSlide();
+    </script>
   </head>
   <body>
-    <p>If you are not redirected, <a href="https://docs.google.com/presentation/d/e/2PACX-1vSE3jXPs7F3UQGB4FkkTwE4zkYpDrI86iN-acZF-iYeTsvzKtKBEh-FUX5K_CY9FsCgee-zr_cjFVTv/pub?start=true&loop=true&delayms=3000">click here</a>.</p>
+    <p>🔄 Loading latest presentation...</p>
   </body>
 </html>
