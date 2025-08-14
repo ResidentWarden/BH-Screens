@@ -11,16 +11,16 @@
           if (url.startsWith("http")) {
             window.location.href = url;
           } else {
-            document.body.innerHTML = "<p>?? Invalid URL: " + url + "</p>";
+            document.body.innerHTML = "<p>Invalid URL: " + url + "</p>";
           }
         } catch (err) {
-          document.body.innerHTML = "<p>? Error: " + err.message + "</p>";
+          document.body.innerHTML = "<p>Error: " + err.message + "</p>";
         }
       }
       redirectToLatestSlide();
     </script>
   </head>
   <body>
-    <p>? Loading latest presentation...</p>
+    <p>Loading latest presentation...</p>
   </body>
 </html>
